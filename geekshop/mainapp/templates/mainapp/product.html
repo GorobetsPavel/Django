@@ -1,0 +1,17 @@
+{% extends 'geekshop\base.html' %}
+{% load static %}
+{% block style %}
+	<link rel="stylesheet" href="{% static '/mainapp/style_products.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'includes/inc_main_menu.html' %}
+		<div class="details">
+			<div class="links clearfix">
+				<ul class="links-menu">
+
+				</ul>
+			</div>
+{{ product.name }}
+		</div>
+{% endblock %}
