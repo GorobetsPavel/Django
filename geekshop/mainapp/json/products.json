@@ -1,0 +1,64 @@
+[
+  {
+
+      "category": 1,
+      "name": "Стул",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "Красный стул",
+      "description": "",
+      "price": "0.00",
+      "quantity": 0,
+      "created": "2021-06-02T20:10:44.190",
+      "updated": "2021-06-02T20:10:44.197"
+
+  },
+  {
+
+      "category": 1,
+      "name": "Другой стул",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "Два стула",
+      "description": "",
+      "price": "00.00",
+      "quantity": 0,
+      "created": "2021-06-02T21:02:56.355",
+      "updated": "2021-06-02T21:02:56.355"
+
+  },
+  {
+
+      "category": 2,
+      "name": "Часы",
+      "image": "products_images/product-4-sm.jpg",
+      "short_desc": "Минималистичные часы",
+      "description": "",
+      "price": "00.00",
+      "quantity": 0,
+      "created": "2021-06-02T21:03:16.006",
+      "updated": "2021-06-02T21:03:16.006"
+  },
+  {
+
+      "category": 1,
+      "name": "Диван",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "Серый диван",
+      "description": "",
+      "price": "00.00",
+      "quantity": 0,
+      "created": "2021-06-02T21:03:37.543",
+      "updated": "2021-06-02T21:03:37.543"
+  },
+  {
+
+      "category": 2,
+      "name": "Настольная лампа",
+      "image": "",
+      "short_desc": "Лампа хай-тек",
+      "description": "",
+      "price": "00.00",
+      "quantity": 0,
+      "created": "2021-06-02T21:04:35.144",
+      "updated": "2021-06-02T21:04:35.144"
+  }
+]
