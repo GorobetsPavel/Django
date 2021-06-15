@@ -1,5 +1,7 @@
-<div class="header clearfix" style="margin-bottom: 20px;">
-    <a href="{% url 'index'%}" class="logo"></a>
+<div class="header d-flex justify-content-start">
+    <div class="col-6">
+        <a href="{% url 'index'%}" class="logo"></a>
+    </div>
     <ul class="menu">
         <li><a href="{% url 'index' %}" class="active">домой</a></li>
         <li><a href="{% url 'products:index' %}">продукты</a></li>
@@ -20,10 +22,12 @@
         </li>
     </ul>
     <a href="#" class="search"></a>
+    {% if basket %}
     <a href="{% url 'basket:view' %}" class="fa fa-shopping-basket basket">
         <span>
-           {% if basket %} {{ basket|length }} {% endif %}
+            {{ basket.0.total_cost|floatformat:0 }} руб
+            {{ basket.0.total_quantity }} шт.
         </span>
     </a>
-
+    {% endif %}
 </div>

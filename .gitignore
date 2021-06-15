@@ -1,0 +1,6 @@
+
+geekshop/__pycache__/
+
+geekshop/authapp/__pycache__/
+
+*.pyc
