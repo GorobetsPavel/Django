@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 
+from adminapp.forms import CategoryRegisterForm, ProductRegisterForm
 from authapp.forms import ShopUserRegisterForm
 from authapp.models import ShopUser
 from django.contrib.auth.decorators import user_passes_test
@@ -102,13 +103,13 @@ def category_create(request):
     title = 'категории/создание'
 
     if request.method == 'POST':
-        edit_form = ShopUserRegisterForm(request.POST, request.FILES)
+        edit_form = CategoryRegisterForm(request.POST, request.FILES)
         if edit_form.is_valid():
             edit_form.save()
 
             return HttpResponseRedirect(reverse('admin_staff:categories'))
     else:
-        edit_form = ShopUserRegisterForm()
+        edit_form = CategoryRegisterForm()
 
     context = {
         'title': title,
@@ -124,13 +125,13 @@ def category_update(request, pk):
     category = get_object_or_404(ProductCategory, pk=pk)
 
     if request.method == 'POST':
-        edit_form = ShopUserRegisterForm(request.POST, request.FILES, instance=category)
+        edit_form = CategoryRegisterForm(request.POST, request.FILES, instance=category)
         if edit_form.is_valid():
             edit_form.save()
 
             return HttpResponseRedirect(reverse('admin_staff:category_update', args=[category.pk]))
     else:
-        edit_form = ShopUserRegisterForm(instance=category)
+        edit_form = CategoryRegisterForm(instance=category)
 
     context = {
         'title': title,
@@ -180,13 +181,13 @@ def product_create(request, pk):
     title = 'продукты/создание'
 
     if request.method == 'POST':
-        edit_form = ShopUserRegisterForm(request.POST, request.FILES)
+        edit_form = ProductRegisterForm(request.POST, request.FILES)
         if edit_form.is_valid():
             edit_form.save()
 
             return HttpResponseRedirect(reverse('admin_staff:products'))
     else:
-        edit_form = ShopUserRegisterForm()
+        edit_form = ProductRegisterForm()
 
     context = {
         'title': title,
@@ -207,13 +208,13 @@ def product_update(request, pk):
     product = get_object_or_404(Product, pk=pk)
 
     if request.method == 'POST':
-        edit_form = ShopUserRegisterForm(request.POST, request.FILES, instance=product)
+        edit_form = ProductRegisterForm(request.POST, request.FILES, instance=product)
         if edit_form.is_valid():
             edit_form.save()
 
             return HttpResponseRedirect(reverse('admin_staff:product_update', args=[product.pk]))
     else:
-        edit_form = ShopUserRegisterForm(instance=product)
+        edit_form = ProductRegisterForm(instance=product)
 
     context = {
         'title': title,
