@@ -34,7 +34,7 @@
                                 <td>{{ category.name }}</td>
                                 <td>{{ category.description }}</td>
                                 <td class="text-center">
-                                    <a href="{% url 'admin_staff:user_delete' user.pk %}">Удалить</a>
+                                    <a href="{% url 'admin_staff:category_delete' category.pk %}">Удалить</a>
                                 </td>
                             </tr>
                         {% endfor %}
