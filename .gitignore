@@ -1,0 +1,8 @@
+
+geekshop/__pycache__/
+
+geekshop/authapp/__pycache__/
+
+*.pyc
+
+geekshop/db.sqlite3
